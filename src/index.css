@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-brand-bg: #fcf9f8;
+  --color-brand-surface: #fcf9f8;
+  --color-brand-primary: #002624;
+  --color-brand-primary-container: #123c3a;
+  --color-brand-secondary: #2c6956;
+  --color-brand-secondary-container: #aeedd5;
+  --color-brand-mint: #a8e6cf;
+  --color-brand-orange: #f4a261;
+  
+  /* Text and outline colors */
+  --color-brand-dark: #1b1b1b;
+  --color-brand-muted: #414847;
+  --color-brand-outline: #717978;
+  --color-brand-outline-variant: #c0c8c7;
+  --color-brand-surface-container: #f0eded;
+  --color-brand-surface-high: #eae7e7;
+}
+
+/* Base resets & custom scrollbar to match physical journal design */
+body {
+  background-color: #123c3a; /* Deep forest/teal background for the desktop device holder */
+  color: #1b1b1b;
+  font-family: var(--font-sans);
+}
+
+/* Glassmorphism overlays and interactive focus effects */
+.glass-overlay {
+  background: rgba(252, 249, 248, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom fade scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c8c7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #717978;
+}
+
+/* Timeline vertical line */
+.timeline-dashed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  width: 2px;
+  border-left: 2px dashed #c0c8c7;
+}

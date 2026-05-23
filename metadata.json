@@ -1,0 +1,6 @@
+{
+  "name": "PrivacyHub",
+  "description": "A privacy-first, web-based mobile social platform focused on user data control, transparent consent actions, and AI-powered sharing safeguards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
